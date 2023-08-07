@@ -5,12 +5,11 @@ import MrScanner.MrScanner;
 import View.View;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class DAO {
     ArrayList<Entity> wiseList = new ArrayList<Entity>();
     View view = new View();
-    MrScanner sc = new MrScanner();
+    MrScanner sc = MrScanner.getInstance();
     int id = 1;
     public void create() {
         String says;

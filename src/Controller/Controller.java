@@ -6,7 +6,7 @@ import View.View;
 
 public class Controller {
     View view = new View();
-    MrScanner sc = new MrScanner();
+    MrScanner sc = MrScanner.getInstance();
     DAO dao = new DAO();
 
     public void start() {

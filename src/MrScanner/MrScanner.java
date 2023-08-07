@@ -3,13 +3,26 @@ package MrScanner;
 import java.util.Scanner;
 
 public class MrScanner {
-    Scanner mrScanner = new Scanner(System.in);
+
+    private static MrScanner instance;
+    private Scanner sc = null;
+
+    public static MrScanner getInstance() {
+        if (instance == null) {
+            instance = new MrScanner();
+        }
+        return instance;
+    }
+    private MrScanner() {
+        this.sc = new Scanner(System.in);
+    }
 
     public String stringInput() {
-        return mrScanner.nextLine();
+        return sc.nextLine();
     }
 
     public int intInput() {
-        return mrScanner.nextInt();
+        return sc.nextInt();
     }
+
 }
